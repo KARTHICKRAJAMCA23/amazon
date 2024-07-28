@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content=
+"width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity=
+"sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Amazon Clone</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-left">
+                <div class="nav-logo">
+                    <img src=
+"https://www.hatchwise.com/wp-content/uploads/2022/05/amazon-logo-1024x683.png">
+                </div>
+                <div class="location">
+                    <p class="top-text">Deliver to</p>
+                    <div class="location-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p class="bottom-text">India</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-center">
+                <select class="search-dropdown">
+                    <option>All</option>
+                    <option>All Departments</option>
+                    <option>Arts & Crafts</option>
+                </select>
+                <input type="text" placeholder="Search Amazon" 
+                    class="search-box">
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass" 
+                        style="color: #28416c;">
+                    </i>
+                </div>
+            </div>
+
+            <div class="nav-right">
+                <div class="language-option">
+                    <div class="flag">
+                        <i class="fa-regular fa-flag"></i>
+                    </div>
+                    <select class="select-language">
+                        <option value="lan">EN</option>
+                        <option value="lan">ES</option>
+                        <option value="lan">AR</option>
+                    </select>
+                </div>
+
+                <div class="account-option">
+                    <p class="top-text">
+                        Hello, sign in
+                    </p>
+                    <select class="select-account">
+                        <option value="Account">
+                            Account & Lists
+                        </option>
+                        <option value="Account">
+                            Account & Lists
+                        </option>
+                        <option value="Account">
+                            Account & Lists
+                        </option>
+                    </select>
+                </div>
+
+                <div class="order-option">
+                    <p class="top-text">
+                        Returns
+                    </p>
+                    <p class="bottom-text">
+                        & Orders
+                    </p>
+                </div>
+
+                <div class="cart-option">
+                    <div class="cart-logo">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                    Cart
+                </div>
+            </div>
+        </nav>
+
+        <div class="nav-options">
+            <div class="all-logo">
+                <i class="fa-solid fa-bars"></i>
+                <p class="list">All</p>
+            </div>
+
+            <div class="options">
+                <p>Today's Deals</p>
+                <p>Customer Service</p>
+                <p>Registry</p>
+                <p>Gift Cards</p>
+                <p> Sell</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="carousel">
+            <div class="slides-container">
+                <div id="slide1" class="slide">
+                    <div class="content">
+                        <img src=
+"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxAQEhIREBIPFRIVFhYVExYVEBAWEhAQFhIWFhUXFhcYHSogGRonGxUVITEhJSkrLi4zFx8zRDMsNygtLysBCgoKDg0OGxAQGi0fICUuLS0wLy0tKy4tLy0tLS0tLS8rLS0tLS8rLS0rLSstLS0vLi0tLSstKy0tLS03LS0tLf/AABEIAMIBAwMBEQACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAABQYDBAcCAQj/xAA8EAACAgEBBgIHBgQFBQAAAAAAAQIDEQQFEiExQVEGYRMiMnGBkaEHFCOxwdFCUnLwM2JzkrIVgtLh8f/EABsBAQACAwEBAAAAAAAAAAAAAAABAwIEBgUH/8QANxEBAAIBAgMFBQcBCQAAAAAAAAECAwQRBSExEkFRYdETcaGxwRQiMoGR4fBSBhUjMzRCU5Lx/9oADAMBAAIRAxEAPwCENx9IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH2MW2kuLfBLuwiZisbzyhbfAWwtHrlbOVk7fRSUJKGVQpNZwrV/iPvutLj15lNsvg5rV8ctv2cEbR4z9I9Ul4u8CwqqlfpN71PWnXlyzDq4t8eHbt9VMkzO0s+G8XvfJ7PPPXpPTn5+9z8udGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABubKVbtjG32JJwfFrG9Fx5riufNcjDJEzXk0OJ475NLetOv0jq6h4arp0tcKaIRhTFYUY9urfeXXL4s1XDLPTPpzXTzQHI/Hfh37ndv1rFFrbh2rnzlD9V5e42sdu1Ds+Fa77Ti7NvxV6+cePr+6sGb1QAAAAAAAAAAAAAAAAAAAAAD1XByeIpyfZJt/JBEzFY3nk2lsrU8/u+px/oW/8AiRvHiq+04f66/wDaPVrXVSh7cZR/qjKP5kra2rb8M7+7mnvDHhWzW+u5xrq78JTlh4e7HPLOVl/UwvkivJ5mv4pj0s9iI7VvDuj3r3ovAWggvWhZY+87JflDC+hTOWzwcnGtVaeUxX3RH13a+1/s6004t6Zyqs6JylOuT7NSy170/gyYyz3rtPxzNWf8X70fpLmGq086pyrsTjODcZJ9GjY6uqpet6xes7xLEGQAAuXhHbDs/Cm8yiuHdx6S8+z+Hc1sldpcdxfRewydukfdt8J8PR0DZ2o3luvmuX7GDyGba2zq9ZROmzlJc+sJL2ZLzTJrO07r9NqL6fLGSnWPj5OI7S0FmntnTasTg8PtJdJLya4m1E7xvDvMGambHGSnSf5t+TVJWgAAAAAAAAAAAAAAAAAA+pN4STbfBJcW2+SQJnbnK/eHPA8MKzWZlLmqk2ox/ra4t+S4e8otl7quZ1vG7TM00/KP6vTw+fuXjR6eupKNVcIRXSMYxX0KpmZ6vAyZb5J3vMzPm2lIhg9PD4PD9/IETt0amr2XHhKpRrnF5TjFYazmUWlzT4iUzaZneZ3Zark1n5rswhlVwHN/tP2ZicNVFcJfh2f1pZhL4rK/7UX4rctnUcC1O9ZwT3c493f6/nKilzoAAB6ovnVONtftRefJrqn5NGFo3hrarT1zY5pbvdR2FtKN9cLYPg18Yvqn5p8DWmNp2cLnw2w5JpbrC1aa7K3vn+5CpW/tC8O/eavT1L8apN4XOyrm4+bXFr4rqW477TtL2eEa72GT2d5+7b4T4+rkyNh14AAAAAAAAAAAAAAAAAALN4C0cZ3yslx9FFOP9c20n8FGXzKss7Q8TjueaYYpH+6fhH/sOk0zNdyTcr4gbUqkllskasrSB6WpAjNTqNyzHSSyvf1/v3Ae4akDQ8TVK7S3wePYco+U4etH6pGVJ2tEt3h+WcWppbz2/KeUuQo23dgAABNeENqfd7tyT/CtaXlGzkn7nyfwKcle94fGNF7SntKxzj5fs6tobMNdn+RQ5NLwXNfIDkf2g+H/ALrd6WtYpuba7Qt5yj7nxa+PY2cdt42djwjW+3xdi34q/GO6fpP5KoWPXAAAAAAAAAAAAAAAAAC0+AbkrLo9ZRg157rkn/zRVm6Q5/8AtBSZx0t4TMfrt6L/AESNdy6V0PF+4ketVPL8kQI3U24A0fvyT5gRniPWNRhOPOL/APf6ESl9r2gSI/xftpU6aUc/iXJwiuu6/bl8E8Z7tGVI3l6PDMPtM8WnpXn6fFQK3lG1DtKzvD0SyAM1OlsmpShCcoxTcpKLcYJc958l8SJmI6qsufHi/wAy0V98tfZeNZY6NM4224b3IyjlxXNptpMx7dfFqTxPSf8AJHx9HXfB0NT6GMNTXZCyDcG5r24r2ZZ68Glnuma9tt+Tk9fXFGaZwzE1nny7vJaq1gxabQ8R7LWr09tLxmSzB/y2LjF/P9TKs7Tu2dJqJ0+auSO7r7u9wqUWm01hptNdU08NfM23fRMTG8dHwJAAAAAAAAAAAAAAAAGxs/VypshZHnF8v5o8mviskWjeNlGpwVz4rY7d/wA+6XS3tqivTvVTmlTGO+5YfBcsYXHOeGO5qTG07OCy4rYrzS/WGx4I8Y6TaG89NOTcGlOM4uM4qWd147PHNBWsUuOSBE7WjiLYFKt1knLhkDFt7asNPRGd7eZSSglxk31eOyXEjbdbjxWyTtCJu8a6WtL0MbLp44ZThWn5t+s/gviZRSW1i0N7T97krer11uqs9Ja8yfDgsRjHpGK6ItrDotLgrjrFaRybumqlJqMVKUnwSSblJ9klzLoepvFK72naIXDZn2eau1KVsq6U+jzOfxUeC+ZhOWsebyM3HNPSdqRNvhHx9GzsrwPFXN3WKymPspJxdsuu8ukV5Pj5GE5eXJqajjvaxbYo7Np/Pb3fzkvWncYJRglGK4JRSSS8kipz1rWtPatO8tijdjlxUU3zaSTk/PHMhi2YyyB7AOXADiPjKhV63UJcnJT+M4qT+rb+JtUnert+F5Jvpab93L9J9EMZvRAAAAAAAAAAAAAAAAADYrtldRfoG+F0d6nL4LUwkpxj5KTil7/eU5I73Pcb0vaj2tY5x1937fJVvAG3f+m6+uyTaps/Cuzw3a5tYk+27JRb8kylzD9Nae1Mgau3pRhRbZLCjCDlJvkopZbfklxCYcl2l420laapTunx5erXnzk1xXuRMVls49La3XkpO0dfdq7PSXS3pcklwjCPaK6IziHq4cMRHZrDPp9AzOKvUx6WUnTRumcQ36Y4q674J2DDS1qcop3zWZSxxgnx3I9lyz3fwKb33nychxPX21GSa1n7kdPPzn6eC3VyK3mIOMd3CznH/wB/UD7vNcyRkjcBuU6tYw+fRkDYV+QPk5hLjfjqxPX346KtP3+ji/1RsYujsODf6aPz+aDLXrgAAAAAAAAAAAAAAAABh1EMrrnmmuafRoxmFOWnajZWPFFO9L02Pbf4i6K5+1JeU/a9+8uxr2jZxeu0k4L8vwz09HVPsb8XS1FL0tzbs06W7J/x0t4in5x5eax5mLRdWhuzi4yScWmmnyaaw0yB+f8Ax14Jns6/1E3pbG/Qz57vV1yf8y6d0s98WV5va0dvbRt3o/RaLHFlkVe9g0/Z5ykoxwWRDfiNnuuSTTfJNN+5MlFo3rMQ7TTdwWDSfOW1XqgI2WoSsw+Wfyf7YAy6m5c8rHfoBH27SohxldTFedkF+bJEZf402dW8S1mmzy4Wxlj37ucAT+h2pCyMZwlGUJLMZRacZRfJprmiBvV6jeCXFts6r02r1NnSVskvOMHuR+kUbNI5O44fj7GCtfL582sWN8AAAAAAAAAAAAAAAAADQRKO2hpVJNNJp8088V8Cu1Wjq9NXLWYmFs+zzZel00LLtPOyUrMRnvuO/Vu8dx4S9+evA15jZxmfBbDfs2dH2XtHoyFKW1ukq1VcqrYqdcl6yf0afRrmmuRMTssxZbYrRek7TDkPifw1ZoLMPMqZf4dmOf8All2kvrzXVLZpaLQ7Th+upqqcuVo6x9Y8vkhTN6AB0rw9tD0mnrbfFR3Zf1R9V/ln4mpeNrbOD4hh9jqb17t949080g9TgxaaK2prdyUZd/05/TAET480Nmu0M6qHme9CajvJK1ReXBvl5rPVIDi09gavOPumqzya+7W8/wDaSMtXhHaE/Z0t0V/niq/+eAOm+Doz0GlhRZJOacpNJ5UN553U/wC+LYFr1G3vQ6a27PFRxDztl6sF88fJiI3lsaXDObLWn8273NtLHCRtQ7vFG0MxktAAAAAAAAAAAAAAAAAAB8lHJCJjdrUam3S2elq904v2bI9n+j6FVq7vI12jrkrzXzY+14XQVtTeOUov2q5fyy/fqUzGzlM2G2K3ZsuGyNqckwqS+u0tWpqlXZFShJYaf0afRroxEzE7wsw5r4bxek7TDkHifw9ZorMPMqpP8Offruy7SX15+7apeLQ7XQa+mqpy5WjrH1jy+SFMm+lNjbXdGYyzuN5/pffHYqyU35w8fivD51ERen4o+MeqxQ2jvx3oNSj3i8o13I3pak9m0bSwXWSs4Sjw55fTzIlii9J4x0ldstNZYo7uErM5qb543lyx5k82fs7bbrRCe/FSrlGUXycZJp/FBjs1dTVY+jAhNbTCn19RZGC7Z9aXko82xHNnjxWyTtWN0BtTar1LjGKcaYexF82+spef5F1K7On4do4wxz5zPX0ILCLoe5Ecn0lIAAAAAAAAAAAAAAAAAAAHmcMkTDG1d2rp7rNNZ6Wr3Si/ZnHtL9+hVarytZoq5I2le9jbWhdFWVt9pRftVy7P9H1KZjZyuo09sNuzZcdk7U6NhQkdpaarUVShNKUZLivya7NdxE7TvCzFlvivF6TtMORbe2NPSWbr9aD9iXddn5r+/LareLO10Gvpq6b9LR1j6x5IqaJlvTCA11V1cnOqU455uEpRf0ZVaHha3TWmd9t4adn3i7hZZfNdp2WSXybMIq0KaSZnlDPVsJtceDM4o3qcMmY5vH/T7qXmuVkH3hOUc/7WYzRRl4daO58lr9byep1TX+vb+5HZan2baej3pKJSe9LLb5tttv4syiHoafDKd0tWCyIe1ips2TNeAAAAAAAAAAAAAAAAAAAAAAfJRyRMImN2tVZZp5+lpfHqv4Zx6qS6ortV5mr0dclZiYXfYW2YXx363hrhODfrVy8+67PqUTGzkc+C2K20rRDbddVcrLpxhCKzKUnhJBSpni7bUNR6JRjKLa9JiaxOMGnu7y/hbTzh8eBbi67uh4DimL2yT022+vwV0vdO8ygmRsxmsS+RrS6DYikQ9kshoI2YZ6WD6Ix7Kq2Gk9z7DTxXIdlNcVYZUjJaAAAAAAAAAAAAAAAAAAAAAAAAHySyQiY3ano7KZq6iW7YvjGcesZLqmV2pu8zWaCuas7dWPW+KNRZOO/RUpQe9BPMoKzDW+4yznGfVw1jq5dKuw53+77RbaTQKyTdlrcpSeW3zb7l1YdLocM0r4JAseiAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8utPoiNmM0iXpIllsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/9k=">
+                    </div>
+                    <a href="#slide3" class="prev arrow">
+                        <i class="fa-solid fa-chevron-left" 
+                            style="color: #ffffff;">
+                        </i>
+                    </a>
+                    <a href="#slide2" class="next arrow">
+                        <i class="fa-solid fa-chevron-right" 
+                            style="color: #ffffff;">
+                        </i>
+                    </a>
+                </div>
+                <div id="slide2" class="slide">
+                    <div class="content">
+                        <img src=
+"https://content.jdmagicbox.com/comp/ahmedabad/c6/079pxx79.xx79.211217151107.q5c6/catalogue/gujarat-cosmatic-pankore-naka-ahmedabad-cosmetic-dealers-1hnaqxigim.jpg">
+                    </div>
+                    <div class="arrows"></div>
+                    <a href="#slide1" class="prev arrow">
+                        <i class="fa-solid fa-chevron-left" 
+                            style="color: #ffffff;">
+                        </i>
+                    </a>
+                    <a href="#slide3" class="next arrow">
+                        <i class="fa-solid fa-chevron-right" 
+                            style="color: #ffffff;">
+                        </i>
+                    </a>
+                </div>
+                <div id="slide3" class="slide">
+                    <div class="content">
+                        <img src=
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX3n_xAe9xzug3-2yl-ZlAghEy6kZgFSI3_Q&s">
+                    </div>
+                    <div class="arrows"></div>
+                    <a href="#slide2" class="prev arrow">
+                        <i class="fa-solid fa-chevron-left" 
+                            style="color: #ffffff;">
+                        </i>
+                    </a>
+                    <a href="#slide1" class="next arrow">
+                        <i class="fa-solid fa-chevron-right" 
+                            style="color: #ffffff;">
+                        </i>
+                    </a>
+                </div>
+            </div>
+            <div class="text">
+                <p>
+                    You are on amazon.com. You can also shop 
+                    on Amazon India for millions of products 
+                    with fast local delivery. 
+                    <a href="#"> 
+                        Click here to go to amazon.in
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        <div class="items-container">
+            <div class="item-card">
+                <h2>Gaming accessories</h2>
+                <img src=
+"https://m.media-amazon.com/images/I/71z1mQJfGmL._AC_UF1000,1000_QL80_.jpg">
+                <p>
+                    <a href="#">See more</a>
+                </p>
+            </div>
+            <div class="item-card">
+                <h2>Deal in PCs</h2>
+                <img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20240326122917/image12.jpg">
+                <p>
+                    <a href="#">See more</a>
+                </p>
+            </div>
+            <div class="item-card">
+                <h2>Amazon Gadget Store</h2>
+                <img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20240326122918/image15.jpg">
+                <p>
+                    <a href="#">See more</a>
+                </p>
+            </div>
+            <div class="item-card">
+                <h2>Handpicked music</h2>
+                <img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20240326122916/image11.jpg">
+                <p>
+                    <a href="#">See more</a>
+                </p>
+            </div>
+            <div class="item-card">
+                <h2>Fill your Easter basket</h2>
+                <img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20240326121956/image3.jpg">
+                <p>
+                    <a href="#">See more</a>
+                </p>
+            </div>
+            <div class="item-card">
+                <h2>Top Deal</h2>
+                <img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20240326122915/image8.jpg">
+                <p>
+                    <a href="#">See more</a>
+                </p>
+            </div>
+            <div class="item-card">
+                <h2>Shop deals in Fashion</h2>
+                <img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20240326122915/image9.jpg">
+                <p>
+                    <a href="#">See more</a>
+                </p>
+            </div>
+            <div class="item-card">
+                <h2>Gaming merchandise</h2>
+                <img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20240326122917/image13.jpg">
+                <p>
+                    <a href="#">See more</a>
+                </p>
+            </div>
+            <div class="item-card">
+                <h2>Movies</h2>
+                <img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20240326121955/image.jpg">
+                <p>
+                    <a href="#">See more</a>
+                </p>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <a href="#" class="back-option">
+            Back to top
+        </a>
+
+        <div class="footer-links">
+            <ul>
+                <p>Get to Know Us</p>
+                <a>Careers</a>
+                <a>Blog</a>
+                <a>About Amazon</a>
+                <a>Investor Relations</a>
+                <a>Amazon Devices</a>
+                <a>Amazon Science</a>
+            </ul>
+            <ul>
+                <p>Make Money with Us</p>
+                <a>Sell products on Amazon</a>
+                <a>Sell on Amazon Business</a>
+                <a>Sell apps on Amazon</a>
+                <a>Become an Affiliate</a>
+                <a>Self-Publish with Us</a>
+                <a>Host an Amazon Hub</a>
+                <a>›See More Make Money with Us</a>
+            </ul>
+            <ul>
+                <p>Amazon Payment Products</p>
+                <a>Amazon Business Card</a>
+                <a>Shop with Points</a>
+                <a>Reload Your Balance</a>
+                <a>Amazon Currency Converter</a>
+            </ul>
+            <ul>
+                <p>Let Us Help You</p>
+                <a>Amazon and COVID-19</a>
+                <a>Your Account</a>
+                <a>Your Orders</a>
+                <a>Shipping Rates & Policies</a>
+                <a>Returns & Replacements</a>
+                <a>Manage Your Content and Devices</a>
+                <a>Amazon Assistant</a>
+                <a>Help</a>
+            </ul>
+        </div>
+        <div class="country-info">
+            <div class="logo">
+                <img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20240326183545/amazon.png">
+            </div>
+            <div class="options">
+                <select>
+                    <option value="En">
+                        English
+                    </option>
+                </select>
+                <select>
+                    <option value="1">
+                        $ USD - U.S. Dollar
+                    </option>
+                </select>
+
+                <select>
+                    <option value="4"> 
+                        United states
+                    </option>
+                </select>
+            </div>
+        </div>
+        <div class="policies">
+            <div class="pages">
+                <a href="#">Conditions of Use</a>
+                <a href="#">Privacy Notice</a>
+                <a href="#">Your Ads Privacy Choices</a>
+            </div>
+            © 1996-2023, Amazon.com, Inc. or its affiliates
+        </div>
+    </footer>
+</body>
+
+</html>
